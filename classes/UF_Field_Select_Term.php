@@ -8,7 +8,8 @@ class UF_Field_Select_Term extends UF_Field_Select {
 
 	function set_taxonomy( $taxonomy ) {
 		if(!taxonomy_exists($taxonomy)) {
-			UF_Notices::add( __("<strong>UF_Field_Select_Term</strong>: Invalid taxonomy! Please check if you've spelled the name of the taxonomy correctly and that the taxonomy is already registered!", 'uf'), true );
+			UF_Notices::add( __("<strong>UF_Field_Select_Term</strong>: Invalid taxonomy '".$taxonomy."'! Please check if you've spelled the name of the taxonomy correctly and that the taxonomy is already registered!", 'uf'), true );
+
 		}
 		$this->taxonomy = $taxonomy;
 
